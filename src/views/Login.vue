@@ -32,7 +32,7 @@ const changeForgot = () => (forgot.value = !forgot.value)
       :text="forgotData.text"
     />
 
-    <div class="bg-[#eee] w-full h-screen overflow-y-auto pt-10 pb-5">
+    <div class="bg-gray-100 w-full h-screen overflow-y-auto pt-10 pb-5">
       <form @submit.prevent="" class="p-10 pb-5 w-[500px] bg-white shadow-lg rounded-md mx-auto">
         <h3 class="text-center text-slate-700 text-4xl mb-5">Log in</h3>
         <div
