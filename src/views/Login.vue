@@ -2,7 +2,7 @@
 import Modal from '@/components/Modal.vue'
 import { ref, reactive } from 'vue'
 
-const access = ref(true)
+const access = ref(false)
 const changeAccess = () => (access.value = !access.value)
 const accessData = reactive({
   title: 'How to get access data?',
