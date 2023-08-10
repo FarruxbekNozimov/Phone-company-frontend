@@ -1,5 +1,8 @@
 <script setup>
 import Popover from '@/components/Popover.vue'
+import DeleteButton from '../components/DeleteButton.vue'
+import ToggleButton from '../components/ToggleButton.vue'
+import EditButton from '../components/EditButton.vue'
 </script>
 
 <template>
@@ -8,21 +11,9 @@ import Popover from '@/components/Popover.vue'
       <img src="/users/avatar-2.jpg" class="h-8 w-8 object-cover rounded-full" alt="" />
       <h3 class="text-4xl text-gray-600">John Doe</h3>
       <div class="flex items-center gap-3">
-        <button
-          class="bg-blue-500/30 text-blue-700 hover:bg-blue-500 hover:text-white duration-300 p-2 px-3 rounded flex items-center justify-center"
-        >
-          <i class="bx bx-pencil"></i>
-        </button>
-        <button
-          class="bg-blue-500/30 text-blue-700 hover:bg-blue-500 hover:text-white duration-300 p-2 px-3 rounded flex items-center justify-center"
-        >
-          <i class="bx bx-toggle-right"></i>
-        </button>
-        <button
-          class="bg-red-500/30 text-red-700 hover:bg-red-500 hover:text-white duration-300 p-2 px-3 rounded flex items-center justify-center"
-        >
-          <i class="bx bx-trash"></i>
-        </button>
+        <EditButton />
+        <ToggleButton />
+        <DeleteButton />
       </div>
     </div>
     <div class="bg-white w-full p-5 shadow rounded mb-5">

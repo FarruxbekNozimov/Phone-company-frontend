@@ -3,7 +3,7 @@ import { menus } from '@/constants/menu'
 </script>
 
 <template>
-  <div class="absolute w-64 bg-white h-screen shadow">
+  <div class="absolute w-72 bg-white h-screen shadow">
     <div class="text-center p-2">
       <img src="/logo.svg" class="mx-auto" alt="" />
     </div>

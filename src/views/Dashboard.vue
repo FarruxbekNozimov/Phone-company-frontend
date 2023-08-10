@@ -6,7 +6,7 @@ import Header from '@/components/Header.vue'
 <template>
   <div class="bg-gray-100 w-full h-screen overflow-x-hidden">
     <Sidebar />
-    <div class="ml-64">
+    <div class="ml-72">
       <Header />
       <div class="p-5">
         <RouterView></RouterView>
