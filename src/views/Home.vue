@@ -2,7 +2,7 @@
 
 <template>
   <div>
-    <RouterView />
+    asd
   </div>
 </template>
 
