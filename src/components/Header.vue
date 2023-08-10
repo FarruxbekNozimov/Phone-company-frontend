@@ -16,7 +16,7 @@ const toggleFullScreen = () => {
 </script>
 
 <template>
-  <div class="h-[70px] w-full bg-white shadow flex items-center justify-between px-5">
+  <div class="h-[60px] w-full bg-white shadow flex items-center justify-between px-5">
     <div class="flex items-center gap-5">
       <i class="bx bx-menu-alt-left text-gray-500 cursor-pointer hover:scale-105 text-3xl"></i>
       <div class="relative">
