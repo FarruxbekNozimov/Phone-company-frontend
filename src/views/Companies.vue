@@ -1,26 +1,26 @@
 <script setup>
-import DeleteButton from '@/components/DeleteButton.vue'
-import ToggleButton from '@/components/ToggleButton.vue'
-import EditButton from '@/components/EditButton.vue'
-import ViewButton from '@/components/ViewButton.vue'
+import DeleteButton from '@/components/Buttons/DeleteButton.vue'
+import ToggleButton from '@/components/Buttons/ToggleButton.vue'
+import EditButton from '@/components/Buttons/EditButton.vue'
+import ViewButton from '@/components/Buttons/ViewButton.vue'
 import Pagination from '@/components/Pagination.vue'
 </script>
 
 <template>
   <div class="relative">
     <div class="flex items-center justify-between mb-5">
-      <button class="flex items-center gap-2 bg-teal-700 rounded px-5 p-2.5 text-white">
+      <button class="flex items-center gap-2 bg-teal-700 rounded px-5 p-2 text-white">
         <i class="bx bx-plus"></i>
         <span>Add company</span>
       </button>
-      <div class="relative w-96 h-full">
+      <div class="relative w-72 h-full">
         <div class="absolute inset-y-0 left-0 flex items-center pl-3">
           <i class="bx bx-search text-gray-500 text-xl"></i>
         </div>
         <input
           type="text"
           autocomplete="off"
-          class="outline-none block w-full h-full p-3.5 pl-10 text-sm text-gray-900 rounded-lg bg-white border border-gray-300 ring-0 focus:ring-0 focus:border-gray-400"
+          class="outline-none block w-full h-full p-3 pl-10 text-sm text-gray-900 rounded bg-white border border-gray-300 ring-0 focus:ring-0 focus:border-gray-400"
           placeholder="Search for result"
           required
         />

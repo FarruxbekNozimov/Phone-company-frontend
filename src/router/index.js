@@ -7,29 +7,39 @@ const router = createRouter({
       path: '/',
       name: 'Dashboard',
       title: 'Home',
-      component: () => import('../views/Dashboard.vue'),
+      component: () => import('@/views/Dashboard.vue'),
       children: [
         {
           path: '/',
           name: 'Home',
-          component: () => import('../views/Home.vue')
+          component: () => import('@/views/Home.vue')
         },
         {
           path: '/companies',
           name: 'Companies',
-          component: () => import('../views/Companies.vue')
+          component: () => import('@/views/Companies.vue')
+        },
+        {
+          path: '/forms',
+          name: 'Forms',
+          component: () => import('@/views/Forms.vue')
+        },
+        {
+          path: '/requests',
+          name: 'Requests',
+          component: () => import('@/views/Requests.vue')
         },
         {
           path: '/users',
           name: 'Users',
-          component: () => import('../views/Users.vue')
+          component: () => import('@/views/Users.vue')
         }
       ]
     },
     {
       path: '/login',
       name: 'Login',
-      component: () => import('../views/Login.vue')
+      component: () => import('@/views/Login.vue')
     },
     {
       path: '/:pathMatch(.*)*',

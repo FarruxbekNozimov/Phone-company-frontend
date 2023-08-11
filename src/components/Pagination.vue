@@ -2,11 +2,13 @@
 
 <template>
   <div class="my-5 flex items-center justify-between">
-    <span> Showing <strong>1</strong> to <strong>5</strong> of <strong>10</strong> results</span>
+    <span class="text-gray-500">
+      Showing <strong>1</strong> to <strong>5</strong> of <strong>10</strong> results</span
+    >
     <nav>
-      <div class="inline-flex -space-x-px text-base h-10">
+      <div class="text-teal-700 inline-flex -space-x-px text-base h-10">
         <div
-          class="flex items-center justify-center px-4 h-10 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700 cursor-pointer"
+          class="flex items-center justify-center px-4 h-10 ml-0 leading-tight bg-white border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700 cursor-pointer text-teal-700"
         >
           Previous
         </div>
@@ -16,12 +18,17 @@
           1
         </div>
         <div
-          class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 cursor-pointer"
+          class="flex items-center justify-center px-4 h-10 leading-tight bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 cursor-pointer text-teal-700"
         >
           2
         </div>
         <div
-          class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100 cursor-pointer"
+          class="flex items-center justify-center px-4 h-10 leading-tight bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 cursor-pointer text-teal-700"
+        >
+          3
+        </div>
+        <div
+          class="flex items-center justify-center px-4 h-10 leading-tight bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100 cursor-pointer text-teal-700"
         >
           Next
         </div>
