@@ -17,7 +17,7 @@ const toggleFullScreen = () => {
 </script>
 
 <template>
-  <div class="h-[70px] w-full bg-white shadow flex items-center justify-between px-5">
+  <div class="fixed z-50 h-[70px] w-full bg-white shadow flex items-center justify-between px-5">
     <div class="flex items-center gap-5">
       <i class="bx bx-menu-alt-left text-gray-500 cursor-pointer hover:scale-105 text-3xl"></i>
       <div class="relative">
@@ -62,12 +62,12 @@ const toggleFullScreen = () => {
       <i
         @click="() => toggleFullScreen()"
         v-if="!fullscreen"
-        class="bx bx-fullscreen text-2xl hover:bg-blue-500/20 p-1 px-2 rounded-full cursor-pointer"
+        class="bx bx-fullscreen text-2xl hover:bg-blue-500/20 p-1 px-2 rounded-full cursor-pointer flex items-center justify-center"
       ></i>
       <i
         @click="() => toggleFullScreen()"
         v-if="fullscreen"
-        class="bx bx-exit-fullscreen text-2xl hover:bg-blue-500/20 p-1 px-2 rounded-full cursor-pointer"
+        class="bx bx-exit-fullscreen text-2xl hover:bg-blue-500/20 p-1 px-2 rounded-full cursor-pointer flex items-center justify-center"
       ></i>
       <div class="relative">
         <div @click="changeDrop" class="cursor-pointer">

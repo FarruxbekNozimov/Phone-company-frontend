@@ -9,8 +9,10 @@ import Header from '@/components/Header.vue'
     <Sidebar />
     <div class="ml-[260px]">
       <Header />
-      <div class="p-5 relative">
+      <div class="pt-[90px] p-5">
         <RouterView></RouterView>
+      </div>
+      <div class="w-full relative">
         <Footer />
       </div>
     </div>

@@ -7,7 +7,7 @@ import Pagination from '@/components/Pagination.vue'
 </script>
 
 <template>
-  <div class="relative">
+  <div>
     <div class="flex items-center justify-between mb-5">
       <button class="flex items-center gap-2 bg-teal-700 rounded px-5 p-2 text-white">
         <i class="bx bx-plus"></i>
@@ -27,13 +27,13 @@ import Pagination from '@/components/Pagination.vue'
       </div>
     </div>
 
-    <div class="mb-5 relative overflow-x-auto shadow-md sm:rounded-lg">
+    <div class="mb-5 overflow-x-auto shadow-md sm:rounded-lg">
       <table class="w-full text-left">
         <thead class="text-sm text-gray-500 uppercase bg-white">
           <tr>
             <th class="px-5 py-3 font-bold">Company name</th>
             <th class="px-5 py-3 font-bold">USERS</th>
-            <th class="font-bold">FORMS</th>
+            <th class="px-2 py-3 font-bold">FORMS</th>
             <th class="px-5 py-3 font-bold">REQUESTS</th>
             <th class="px-5 py-3 font-bold">TARRIF PLAN</th>
             <th class="px-5 py-3 font-bold">ACTION</th>
@@ -62,7 +62,7 @@ import Pagination from '@/components/Pagination.vue'
                 </div>
               </div>
             </td>
-            <td class="">1</td>
+            <td class="px-2 py-4">1</td>
             <td class="px-5 py-4 whitespace-nowrap">
               <div class="flex items-center gap-2">
                 <div class="">
@@ -83,28 +83,30 @@ import Pagination from '@/components/Pagination.vue'
                 </div>
               </div>
             </td>
-            <td v-if="el % 2" class="text-xs px-5 py-4 text w-full whitespace-nowrap">
-              <span class="text-xs p-1 text rounded bg-teal-600/30 text-teal-700">Start</span>
+            <td v-if="el % 2" class="text-xs px-5 py-4 whitespace-nowrap">
+              <span class="text-xs p-1 rounded bg-teal-600/10 px-2 text-teal-700">Start</span>
               till 12.09.2024 -
               <span
-                class="text-xs cursor-pointer bg-blue-500/30 hover:bg-blue-500 duration-200 text-blue-500 text hover:text-white p-1 rounded"
+                class="text-xs cursor-pointer bg-blue-500/10 px-2 hover:bg-blue-500 duration-200 text-blue-500 hover:text-white p-1 rounded"
               >
                 Prolang
               </span>
             </td>
-            <td v-else class="text-xs px-5 py-4 text w-full whitespace-nowrap">
-              <span class="text-xs p-1 text rounded bg-purple-600/30 text-purple-700">Start</span> -
+            <td v-else class="text-xs px-5 py-4 whitespace-nowrap">
+              <span class="text-xs p-1 rounded bg-purple-600/10 px-2 text-purple-700">Start</span> -
               <span
-                class="text-xs cursor-pointer bg-red-500/30 hover:bg-red-500 duration-200 text-red-500 text hover:text-white p-1 rounded"
+                class="text-xs cursor-pointer bg-red-500/10 hover:bg-red-500 duration-200 text-red-500 hover:text-white p-1 rounded"
               >
                 awaiting payment
               </span>
             </td>
-            <td class="flex gap-2 px-5 py-4 w-full whitespace-nowrap">
-              <ViewButton />
-              <EditButton />
-              <ToggleButton />
-              <DeleteButton />
+            <td class="px-5 py-4 whitespace-nowrap">
+              <div class="flex gap-2">
+                <ViewButton />
+                <EditButton />
+                <ToggleButton />
+                <DeleteButton />
+              </div>
             </td>
           </tr>
         </tbody>

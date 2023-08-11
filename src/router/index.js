@@ -30,9 +30,19 @@ const router = createRouter({
           component: () => import('@/views/Requests.vue')
         },
         {
-          path: '/users',
-          name: 'Users',
-          component: () => import('@/views/Users.vue')
+          path: '/alerts',
+          name: 'Alerts',
+          component: () => import('@/views/Alerts.vue')
+        },
+        {
+          path: '/user',
+          name: 'User',
+          component: () => import('@/views/User.vue')
+        },
+        {
+          path: '/:pathMatch(.*)*',
+          name: '404',
+          component: () => import('@/views/404.vue')
         }
       ]
     },

@@ -8,7 +8,7 @@ import Pagination from '@/components/Pagination.vue'
 </script>
 
 <template>
-  <div class="relative">
+  <div>
     <div class="flex items-center justify-between mb-5">
       <button class="flex items-center gap-2 bg-teal-700 rounded px-5 p-2 text-white">
         <i class="bx bx-plus"></i>
@@ -31,7 +31,7 @@ import Pagination from '@/components/Pagination.vue'
       </div>
     </div>
 
-    <div class="mb-5 relative overflow-x-auto shadow-md sm:rounded-lg">
+    <div class="mb-5 overflow-x-auto shadow-md sm:rounded-lg">
       <table class="w-full text-sm text-left text-gray-500">
         <thead class="text-md text-gray-500 uppercase bg-white">
           <tr>
