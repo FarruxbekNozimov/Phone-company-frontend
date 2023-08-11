@@ -28,15 +28,15 @@ import Pagination from '@/components/Pagination.vue'
     </div>
 
     <div class="mb-5 relative overflow-x-auto shadow-md sm:rounded-lg">
-      <table class="w-full text-sm text-left text-gray-500">
-        <thead class="text-md text-gray-700 uppercase bg-white">
+      <table class="w-full text-left">
+        <thead class="text-sm text-gray-500 uppercase bg-white">
           <tr>
-            <th class="px-5 py-3">Company name</th>
-            <th class="px-5 py-3">USERS</th>
-            <th>FORMS</th>
-            <th class="px-5 py-3">REQUESTS</th>
-            <th class="px-5 py-3">TARRIF PLAN</th>
-            <th class="px-5 py-3">ACTION</th>
+            <th class="px-5 py-3 font-bold">Company name</th>
+            <th class="px-5 py-3 font-bold">USERS</th>
+            <th class="font-bold">FORMS</th>
+            <th class="px-5 py-3 font-bold">REQUESTS</th>
+            <th class="px-5 py-3 font-bold">TARRIF PLAN</th>
+            <th class="px-5 py-3 font-bold">ACTION</th>
           </tr>
         </thead>
         <tbody>
@@ -82,13 +82,21 @@ import Pagination from '@/components/Pagination.vue'
                 </div>
               </div>
             </td>
-            <td class="px-5 py-4 text-xs w-full whitespace-nowrap">
-              <span class="p-2 text-xs rounded bg-teal-600/30 text-teal-700">Start</span>
+            <td v-if="el % 2" class="text-xs px-5 py-4 text w-full whitespace-nowrap">
+              <span class="text-xs p-1 text rounded bg-teal-600/30 text-teal-700">Start</span>
               till 12.09.2024 -
               <span
-                class="cursor-pointer bg-blue-500/30 hover:bg-blue-500 duration-200 text-blue-500 text-xs hover:text-white p-2 rounded"
+                class="text-xs cursor-pointer bg-blue-500/30 hover:bg-blue-500 duration-200 text-blue-500 text hover:text-white p-1 rounded"
               >
                 Prolang
+              </span>
+            </td>
+            <td v-else class="text-xs px-5 py-4 text w-full whitespace-nowrap">
+              <span class="text-xs p-1 text rounded bg-purple-600/30 text-purple-700">Start</span> -
+              <span
+                class="text-xs cursor-pointer bg-red-500/30 hover:bg-red-500 duration-200 text-red-500 text hover:text-white p-1 rounded"
+              >
+                awaiting payment
               </span>
             </td>
             <td class="flex gap-2 px-5 py-4 w-full whitespace-nowrap">

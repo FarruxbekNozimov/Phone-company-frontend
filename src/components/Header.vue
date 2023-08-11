@@ -27,7 +27,7 @@ const toggleFullScreen = () => {
         <input
           type="text"
           autocomplete="off"
-          class="outline-none block w-full p-2 pl-10 text-sm text-gray-900 rounded-lg bg-gray-100 border-none"
+          class="outline-none block w-64 p-2 pl-10 text-sm text-gray-900 rounded-lg bg-gray-100 border-none"
           placeholder="Search..."
           required
         />

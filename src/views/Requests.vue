@@ -74,15 +74,13 @@ const checkAll = (check) => {
       <table class="w-full text-sm text-left text-gray-500">
         <thead class="text-md text-gray-500 uppercase bg-white">
           <tr>
-            <Popover title="Check All">
-              <th scope="col" class="p-4">
-                <input
-                  @change="(e) => checkAll(e)"
-                  type="checkbox"
-                  class="cursor-pointer w-4 h-4 text-teal-500 bg-gray-100 border-gray-300 rounded"
-                />
-              </th>
-            </Popover>
+            <th scope="col" class="p-4">
+              <input
+                @change="(e) => checkAll(e)"
+                type="checkbox"
+                class="cursor-pointer w-4 h-4 text-teal-500 bg-gray-100 border-gray-300 rounded"
+              />
+            </th>
             <th class="px-5 py-3 font-bold whitespace-nowrap">ID</th>
             <th class="px-5 py-3 font-bold whitespace-nowrap">USER</th>
             <th class="px-5 py-3 font-bold whitespace-nowrap">DATE</th>
