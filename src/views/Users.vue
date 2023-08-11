@@ -1,8 +1,8 @@
 <script setup>
 import Popover from '@/components/Popover.vue'
-import DeleteButton from '../components/DeleteButton.vue'
-import ToggleButton from '../components/ToggleButton.vue'
-import EditButton from '../components/EditButton.vue'
+import DeleteButton from '@/components/Buttons/DeleteButton.vue'
+import ToggleButton from '@/components/Buttons/ToggleButton.vue'
+import EditButton from '@/components/Buttons/EditButton.vue'
 </script>
 
 <template>
