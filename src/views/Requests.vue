@@ -1,5 +1,4 @@
 <script setup>
-import Popover from '@/components/Popover.vue'
 import DeleteButton from '@/components/Buttons/DeleteButton.vue'
 import ToggleButton from '@/components/Buttons/ToggleButton.vue'
 import ChatButton from '@/components/Buttons/ChatButton.vue'
@@ -8,6 +7,10 @@ import Pagination from '@/components/Pagination.vue'
 import Dropdown from '@/components/Dropdown.vue'
 import StatusButton from '../components/Buttons/StatusButton.vue'
 import DeleteModal from '../components/DeleteModal.vue'
+import { ref } from 'vue'
+
+const deleteId = ref()
+const changeDelete = (id = null) => (deleteId = id)
 
 const fitler = ['All', 'Username 1', 'Username 2', 'Username 3', 'Username 4', 'Username 5']
 const status = ['All', 'Active', 'Listed', 'Closed', 'Issue', 'Deleted']

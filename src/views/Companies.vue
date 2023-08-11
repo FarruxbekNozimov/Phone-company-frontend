@@ -42,43 +42,44 @@ import Pagination from '@/components/Pagination.vue'
         <tbody>
           <tr v-for="el in 10" class="bg-white font-medium text-gray-900 border-b hover:bg-gray-50">
             <td class="px-10 py-4 whitespace-nowrap flex items-center justify-center gap-2">
-              <img src="/logo.svg" alt="" />
+              <img v-if="el % 2" src="/logo.svg" class="h-9 w-9 rounded-full" alt="" />
+              <img v-else src="/users/avatar-2.jpg" class="h-9 w-9 rounded-full" alt="" />
               Company name
             </td>
             <td class="px-5 py-4 whitespace-nowrap">
               <div class="flex items-center gap-2">
-                <div class="text-xs">
-                  <h3 class="text-teal-700">12</h3>
-                  Active
+                <div class="">
+                  <h3 class="text-md text-teal-700">12</h3>
+                  <span class="text-xs">Active</span>
                 </div>
-                <div class="text-xs">
-                  <h3 class="text-teal-700">24</h3>
-                  Unactive
+                <div class="">
+                  <h3 class="text-md text-teal-700">24</h3>
+                  <span class="text-xs">Unactive</span>
                 </div>
-                <div class="text-xs">
-                  <h3 class="text-red-500">2</h3>
-                  Deleted
+                <div class="">
+                  <h3 class="text-md text-red-500">2</h3>
+                  <span class="text-xs">Deleted</span>
                 </div>
               </div>
             </td>
             <td class="">1</td>
             <td class="px-5 py-4 whitespace-nowrap">
               <div class="flex items-center gap-2">
-                <div class="text-xs">
-                  <h3 class="text-teal-700">12</h3>
-                  Active
+                <div class="">
+                  <h3 class="text-md text-teal-700">12</h3>
+                  <span class="text-xs">Active</span>
                 </div>
-                <div class="text-xs">
-                  <h3 class="text-teal-700">24</h3>
-                  Listed
+                <div class="">
+                  <h3 class="text-md text-teal-700">24</h3>
+                  <span class="text-xs">Listed</span>
                 </div>
-                <div class="text-xs">
-                  <h3 class="text-teal-700">145</h3>
-                  Closed
+                <div class="">
+                  <h3 class="text-md text-teal-700">145</h3>
+                  <span class="text-xs">Closed</span>
                 </div>
-                <div class="text-xs">
-                  <h3 class="text-red-500">2</h3>
-                  Issued
+                <div class="">
+                  <h3 class="text-md text-red-500">2</h3>
+                  <span class="text-xs">Issued</span>
                 </div>
               </div>
             </td>
