@@ -6,13 +6,13 @@ const currentItem = ref(1)
 </script>
 
 <template>
-  <div>
+  <div class="relative">
     <div
       class="bg-yellow-200/20 border border-yellow-200 rounded-lg text-yellow-800/70 text-sm p-5 shadow roudned mb-5"
     >
       Alert text from administration!
     </div>
-    <div class="bg-white rounded-lg shadow p-5">
+    <div class="bg-white rounded-lg shadow p-5 mb-5">
       <div class="border rounded-lg mb-5">
         <a
           class="block p-4 px-5 hover:bg-gray-200 rounded-lg"

@@ -1,7 +1,13 @@
-<script setup></script>
+<script setup>
+import DeleteButton from '@/components/DeleteButton.vue'
+import ToggleButton from '@/components/ToggleButton.vue'
+import EditButton from '@/components/EditButton.vue'
+import ViewButton from '@/components/ViewButton.vue'
+import Pagination from '@/components/Pagination.vue'
+</script>
 
 <template>
-  <div>
+  <div class="relative">
     <div class="flex items-center justify-between mb-5">
       <button class="flex items-center gap-2 bg-teal-700 rounded px-5 p-2.5 text-white">
         <i class="bx bx-plus"></i>
@@ -21,73 +27,81 @@
       </div>
     </div>
 
-    <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+    <div class="mb-5 relative overflow-x-auto shadow-md sm:rounded-lg">
       <table class="w-full text-sm text-left text-gray-500">
         <thead class="text-md text-gray-700 uppercase bg-white">
           <tr>
-            <th scope="col" class="px-6 py-3">Company name</th>
-            <th scope="col" class="px-6 py-3">USERS</th>
-            <th scope="col" class="px-6 py-3">FORMS</th>
-            <th scope="col" class="px-6 py-3">REQUESTS</th>
-            <th scope="col" class="px-6 py-3">TARRIF PLAN</th>
-            <th scope="col" class="px-6 py-3">ACTION</th>
+            <th class="px-5 py-3">Company name</th>
+            <th class="px-5 py-3">USERS</th>
+            <th>FORMS</th>
+            <th class="px-5 py-3">REQUESTS</th>
+            <th class="px-5 py-3">TARRIF PLAN</th>
+            <th class="px-5 py-3">ACTION</th>
           </tr>
         </thead>
         <tbody>
-          <tr class="bg-white font-medium text-gray-900 border-b hover:bg-gray-50">
-            <td class="px-6 py-4 whitespace-nowrap flex items-center justify-center gap-2">
+          <tr v-for="el in 10" class="bg-white font-medium text-gray-900 border-b hover:bg-gray-50">
+            <td class="px-10 py-4 whitespace-nowrap flex items-center justify-center gap-2">
               <img src="/logo.svg" alt="" />
               Company name
             </td>
-            <td class="px-6 py-4 whitespace-nowrap">
+            <td class="px-5 py-4 whitespace-nowrap">
               <div class="flex items-center gap-2">
-                <div class="text-sm">
+                <div class="text-xs">
                   <h3 class="text-teal-700">12</h3>
                   Active
                 </div>
-                <div class="text-sm">
+                <div class="text-xs">
                   <h3 class="text-teal-700">24</h3>
                   Unactive
                 </div>
-                <div class="text-sm">
+                <div class="text-xs">
                   <h3 class="text-red-500">2</h3>
                   Deleted
                 </div>
               </div>
             </td>
-            <td class="px-6 py-4 whitespace-nowrap">1</td>
-            <td class="px-6 py-4 whitespace-nowrap">
+            <td class="">1</td>
+            <td class="px-5 py-4 whitespace-nowrap">
               <div class="flex items-center gap-2">
-                <div class="text-sm">
+                <div class="text-xs">
                   <h3 class="text-teal-700">12</h3>
                   Active
                 </div>
-                <div class="text-sm">
+                <div class="text-xs">
                   <h3 class="text-teal-700">24</h3>
                   Listed
                 </div>
-                <div class="text-sm">
+                <div class="text-xs">
                   <h3 class="text-teal-700">145</h3>
                   Closed
                 </div>
-                <div class="text-sm">
+                <div class="text-xs">
                   <h3 class="text-red-500">2</h3>
                   Issued
                 </div>
               </div>
             </td>
-            <td class="px-6 py-4 w-full whitespace-nowrap">
+            <td class="px-5 py-4 text-xs w-full whitespace-nowrap">
               <span class="p-2 text-xs rounded bg-teal-600/30 text-teal-700">Start</span>
               till 12.09.2024 -
-              <span class="cursor-pointer bg-blue-500/30 text-blue-500 p-2 rounded">Prolang</span>
+              <span
+                class="cursor-pointer bg-blue-500/30 hover:bg-blue-500 duration-200 text-blue-500 text-xs hover:text-white p-2 rounded"
+              >
+                Prolang
+              </span>
             </td>
-            <td class="px-6 py-4 w-full whitespace-nowrap">
-              <span class="p-2 text-xs rounded bg-teal-600/30">Start</span>
+            <td class="flex gap-2 px-5 py-4 w-full whitespace-nowrap">
+              <ViewButton />
+              <EditButton />
+              <ToggleButton />
+              <DeleteButton />
             </td>
           </tr>
         </tbody>
       </table>
     </div>
+    <Pagination />
   </div>
 </template>
 

@@ -9,9 +9,10 @@ const changeDrop = () => (drop.value = !drop.value)
 const lang = ref(false)
 const changeLang = () => (lang.value = !lang.value)
 
-const fullscreen = ref(document.fullscreen)
+const fullscreen = ref(false)
 const toggleFullScreen = () => {
   fullscreen.value ? document.exitFullscreen() : document.documentElement.requestFullscreen()
+  fullscreen.value = !fullscreen.value
 }
 </script>
 
