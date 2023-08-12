@@ -8,7 +8,7 @@ import Clear from '../components/Clear.vue'
   <div class="flex gap-5">
     <div class="w-[24%] sticky">
       <select
-        class="mb-5 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded block w-full p-2.5 outline-none"
+        class="mb-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded block w-full p-2.5 outline-none"
       >
         <option selected>Choose a company</option>
         <option value="company 1">Company 1</option>

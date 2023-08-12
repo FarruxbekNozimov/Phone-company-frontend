@@ -2,7 +2,22 @@
 import ChatOne from '@/components/ChatOne.vue'
 import Fields from '@/components/Fields.vue'
 import Loading from '@/components/Loading.vue'
-import { chat_menus } from "../constants/chat_menus";
+import Message from '../components/Message.vue'
+import { chat_menus } from '../constants/chat_menus'
+import { messages } from '../constants/messages'
+import { ref } from 'vue'
+
+const input = ref('')
+const addMessage = () => {
+  if (input.value.trim() != '') {
+    messages.value.push({
+      mine: true,
+      msg: input.value.trim(),
+      user_photo: '/users/avatar-1.jpg'
+    })
+  }
+  input.value = ''
+}
 </script>
 
 <template>
@@ -64,8 +79,30 @@ import { chat_menus } from "../constants/chat_menus";
         :data="chat_menus.map((i) => i.name)"
       />
     </div>
-    <div class="w-[45%] bg-white h-[80vh] rounded-lg shadow overflow-y-auto">
-      <Message />
+    <div class="w-[45%] bg-white h-[80vh] rounded-lg shadow relative">
+      <div class="h-[80vh] overflow-x-auto pb-14">
+        <Message v-for="msg in messages" :msg="msg" />
+      </div>
+      <form
+        @submit.prevent="addMessage"
+        class="bg-white absolute bottom-0 w-full p-1 flex items-center"
+      >
+        <input
+          type="text"
+          class="h-10 outline-none rounded-l-lg px-2 w-full border border-teal-600"
+          v-model="input"
+        />
+        <button
+          class="h-10 p-2 px-4 bg-teal-600/30 hover:bg-teal-700 hover:text-white text-teal-700 flex items-center justify-center"
+        >
+          <i class="bx bx-image text-xl"></i>
+        </button>
+        <button
+          class="h-10 p-2 px-4 bg-teal-600 hover:bg-teal-700 text-white rounded-r-lg flex items-center justify-center"
+        >
+          <i class="bx bx-paper-plane text-xl"></i>
+        </button>
+      </form>
     </div>
   </div>
 </template>
