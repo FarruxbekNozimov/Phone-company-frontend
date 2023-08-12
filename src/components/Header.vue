@@ -17,7 +17,9 @@ const toggleFullScreen = () => {
 </script>
 
 <template>
-  <div class="fixed z-50 h-[70px] w-full bg-white shadow flex items-center justify-between px-5">
+  <div
+    class="fixed z-50 h-[70px] lg:w-[calc(100%-260px)] w-[calc(100%-80px)] bg-white shadow flex items-center justify-between px-5"
+  >
     <div class="flex items-center gap-5">
       <i class="bx bx-menu-alt-left text-gray-500 cursor-pointer hover:scale-105 text-3xl"></i>
       <div class="relative">
@@ -74,7 +76,7 @@ const toggleFullScreen = () => {
           John Doe <i class="bx bxs-chevron-down"></i>
         </div>
         <div
-          class="absolute py-2 rounded-lg top-8 duration-300 w-36 bg-white shadow-xl"
+          class="absolute py-2 rounded-lg top-12 duration-300 w-36 bg-white shadow-xl"
           :class="drop ? 'right-0' : '-right-56'"
         >
           <div class="px-5 flex items-center gap-2 cursor-pointer hover:bg-gray-300/50 p-1 mb-2">

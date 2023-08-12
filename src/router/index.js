@@ -30,6 +30,11 @@ const router = createRouter({
           component: () => import('@/views/Requests.vue')
         },
         {
+          path: '/request',
+          name: 'Request',
+          component: () => import('@/views/Request.vue')
+        },
+        {
           path: '/chats',
           name: 'Chats',
           component: () => import('@/views/Chats.vue')
@@ -43,6 +48,11 @@ const router = createRouter({
           path: '/user',
           name: 'User',
           component: () => import('@/views/User.vue')
+        },
+        {
+          path: '/company',
+          name: 'Company',
+          component: () => import('@/views/Company.vue')
         },
         {
           path: '/:pathMatch(.*)*',
