@@ -2,6 +2,9 @@
 import { ref } from 'vue'
 import { langs } from '@/constants/langs'
 
+const isShort = ref(false)
+const toggleShort = () => (isShort.value = !isShort.value)
+
 const currentLang = ref(langs[0])
 const drop = ref(false)
 const changeDrop = () => (drop.value = !drop.value)
@@ -21,7 +24,11 @@ const toggleFullScreen = () => {
     class="fixed z-50 h-[70px] lg:w-[calc(100%-260px)] w-[calc(100%-80px)] bg-white shadow flex items-center justify-between px-5"
   >
     <div class="flex items-center gap-5">
-      <i class="bx bx-menu-alt-left text-gray-500 cursor-pointer hover:scale-105 text-3xl"></i>
+      <i
+        @click="toggleShort"
+        class="text-gray-500 duration-300 cursor-pointer hover:scale-105 text-3xl"
+        :class="isShort ? 'bx bx-right-arrow-alt ' : 'rotate-180 bx bx-menu-alt-right'"
+      ></i>
       <div class="relative">
         <div class="absolute inset-y-0 left-0 flex items-center pl-3">
           <i class="bx bx-search text-gray-500 text-xl"></i>

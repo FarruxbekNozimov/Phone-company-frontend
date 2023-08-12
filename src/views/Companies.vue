@@ -9,10 +9,13 @@ import Pagination from '@/components/Pagination.vue'
 <template>
   <div>
     <div class="flex items-center justify-between mb-5">
-      <button class="flex items-center gap-2 bg-teal-700 rounded px-5 p-2 text-white">
+      <router-link
+        to="company-add"
+        class="flex items-center gap-2 bg-teal-700 rounded px-5 p-2 text-white"
+      >
         <i class="bx bx-plus"></i>
         <span>Add company</span>
-      </button>
+      </router-link>
       <div class="relative w-72 h-full">
         <div class="absolute inset-y-0 left-0 flex items-center pl-3">
           <i class="bx bx-search text-gray-500 text-xl"></i>

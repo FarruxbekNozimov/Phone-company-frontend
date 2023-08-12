@@ -2,7 +2,6 @@
 import ChatButton from '@/components/Buttons/ChatButton.vue'
 import EditButton from '@/components/Buttons/EditButton.vue'
 import DeleteButton from '@/components/Buttons/DeleteButton.vue'
-import { ref } from 'vue'
 
 const fields = [
   { icon: 'bx bx-coffee' },
