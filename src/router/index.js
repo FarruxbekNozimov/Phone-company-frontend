@@ -95,6 +95,11 @@ const router = createRouter({
           component: () => import('@/views/Users.vue')
         },
         {
+          path: '/icons',
+          name: 'Icons',
+          component: () => import('@/views/Icons.vue')
+        },
+        {
           path: '/:pathMatch(.*)*',
           name: '404',
           component: () => import('@/views/404.vue')

@@ -5,7 +5,7 @@
     <div class="flex items-center gap-3">
       <router-link
         v-for="el in 4"
-        to="text-page"
+        to="text"
         class="text-teal-700 hover:text-black text-sm font-thin"
       >
         Text page
