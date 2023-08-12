@@ -85,6 +85,16 @@ const router = createRouter({
           component: () => import('@/views/Text.vue')
         },
         {
+          path: '/user-add',
+          name: 'User-add',
+          component: () => import('@/views/User-add.vue')
+        },
+        {
+          path: '/users',
+          name: 'Users',
+          component: () => import('@/views/Users.vue')
+        },
+        {
           path: '/:pathMatch(.*)*',
           name: '404',
           component: () => import('@/views/404.vue')

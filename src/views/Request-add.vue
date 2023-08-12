@@ -125,7 +125,7 @@ import { chat_menus } from '../constants/chat_menus'
         {{ el.name }}
       </div>
     </div>
-    <button class="bg-teal-600 p-2 px-4 rounded text-white">Send request</button>
+    <button class="bg-teal-700 p-2 px-4 rounded text-white">Send request</button>
   </div>
 </template>
 
