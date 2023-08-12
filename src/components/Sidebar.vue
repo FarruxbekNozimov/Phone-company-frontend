@@ -28,7 +28,7 @@ import { menus } from '@/constants/menu'
       <img src="/support.svg" class="mb-2 h-28 w-full" alt="" />
       <p class="mb-3 text-gray-500 text-sm">Have any questions?</p>
       <button
-        class="bg-teal-600 hover:bg-teal-700 text-white flex items-center gap-2 mx-auto p-1 rounded px-2"
+        class="bg-teal-700 hover:bg-teal-800 text-white flex items-center gap-2 mx-auto p-2 rounded px-4"
       >
         <i class="bx bx-paper-plane"></i>
         <span>Get support</span>

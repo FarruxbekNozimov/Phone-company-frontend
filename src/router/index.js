@@ -65,6 +65,26 @@ const router = createRouter({
           component: () => import('@/views/Form.vue')
         },
         {
+          path: '/form-add',
+          name: 'Form-add',
+          component: () => import('@/views/Form-add.vue')
+        },
+        {
+          path: '/profile',
+          name: 'Profile',
+          component: () => import('@/views/Profile.vue')
+        },
+        {
+          path: '/request-add',
+          name: 'Request-add',
+          component: () => import('@/views/Request-add.vue')
+        },
+        {
+          path: '/text',
+          name: 'Text',
+          component: () => import('@/views/Text.vue')
+        },
+        {
           path: '/:pathMatch(.*)*',
           name: '404',
           component: () => import('@/views/404.vue')

@@ -12,7 +12,7 @@ const tariff = {
     <h3 class="text-md mb-2 text-gray-700">Company Name</h3>
     <input
       type="text"
-      class="w-full border p-3 outline-none focus:border-teal-600 duration-300 rounded mb-4 border-gray-400"
+      class="w-full border p-2 px-3 outline-none focus:border-teal-600 duration-300 rounded mb-4 border-gray-400"
       placeholder="Enter company name"
     />
     <label
@@ -37,15 +37,12 @@ const tariff = {
       <div class="w-full border-b border-gray-200 rounded-t-lg">
         <div v-for="(el, i, j) in tariff" class="flex items-center pl-3">
           <input
-            id="list-radio-license"
+            :id="j"
             type="radio"
             name="list-radio"
             class="w-4 h-4 text-teal-600 border bg-gray-100 border-gray-300 focus:ring-teal-500"
           />
-          <label
-            for="list-radio-license"
-            class="w-full py-3 ml-2 text-md font-medium text-gray-500"
-          >
+          <label :for="j" class="w-full py-3 ml-2 text-md font-medium text-gray-500">
             <span class="font-bold text-gray-800">{{ i }}</span>
             ( up to {{ el }} users)
           </label>

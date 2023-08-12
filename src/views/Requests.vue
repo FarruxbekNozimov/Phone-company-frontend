@@ -28,10 +28,13 @@ const checkAll = (check) => {
   <DeleteModal />
   <div class="">
     <div class="flex items-center justify-between mb-5 gap-5">
-      <button class="flex items-center gap-2 bg-teal-700 rounded px-5 p-2 text-white">
+      <router-link
+        to="request-add"
+        class="flex items-center gap-2 bg-teal-700 rounded px-5 p-2 text-white"
+      >
         <i class="bx bx-plus"></i>
-        <span class="text-sm whitespace-nowrap">Add Request</span>
-      </button>
+        <span>Add request</span>
+      </router-link>
       <div class="flex items-center gap-5">
         <div class="lg:flex items-center hidden relative w-72 h-full">
           <div class="absolute inset-y-0 left-0 flex items-center pl-3">

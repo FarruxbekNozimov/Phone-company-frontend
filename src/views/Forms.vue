@@ -10,10 +10,13 @@ import Pagination from '@/components/Pagination.vue'
 <template>
   <div>
     <div class="flex items-center justify-between mb-5">
-      <button class="flex items-center gap-2 bg-teal-700 rounded px-5 p-2 text-white">
+      <router-link
+        to="company-add"
+        class="flex items-center gap-2 bg-teal-700 rounded px-5 p-2 text-white"
+      >
         <i class="bx bx-plus"></i>
         <span>Add Form</span>
-      </button>
+      </router-link>
       <div class="flex items-center gap-5">
         <div class="relative w-72 h-full">
           <div class="absolute inset-y-0 left-0 flex items-center pl-3">
@@ -52,8 +55,12 @@ import Pagination from '@/components/Pagination.vue'
               Field name Field name Field name Field name Field name + 2
             </td>
             <td class="flex gap-2 px-5 py-4 w-full whitespace-nowrap">
-              <ViewButton />
-              <EditButton />
+              <router-link to="/form">
+                <ViewButton />
+              </router-link>
+              <router-link to="/form-add">
+                <EditButton />
+              </router-link>
               <ToggleButton />
               <DeleteButton />
             </td>
