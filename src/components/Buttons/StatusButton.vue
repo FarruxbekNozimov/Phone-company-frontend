@@ -1,11 +1,11 @@
 <script setup>
-defineProps(['text', 'bg', 'color'])
+defineProps(['text', 'bg', 'color', 'pad'])
 </script>
 
 <template>
   <button
-    :class="`${bg} ${color}`"
-    class="p-1 px-2 font-bold text-xs rounded"
+    class="rounded"
+    :class="`${bg} ${color} ${pad ? pad : 'text-xs p-1 px-2'}`"
     v-html="text"
   ></button>
 </template>

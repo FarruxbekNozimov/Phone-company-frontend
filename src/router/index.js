@@ -30,6 +30,11 @@ const router = createRouter({
           component: () => import('@/views/Requests.vue')
         },
         {
+          path: '/chats',
+          name: 'Chats',
+          component: () => import('@/views/Chats.vue')
+        },
+        {
           path: '/alerts',
           name: 'Alerts',
           component: () => import('@/views/Alerts.vue')
