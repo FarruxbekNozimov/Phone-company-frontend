@@ -79,8 +79,8 @@ const addMessage = () => {
         :data="chat_menus.map((i) => i.name)"
       />
     </div>
-    <div class="w-[45%] bg-white h-[80vh] rounded-lg shadow relative">
-      <div class="h-[80vh] overflow-x-auto pb-14">
+    <div class="w-[45%] bg-white h-screen rounded-lg shadow relative">
+      <div class="h-full overflow-x-auto pb-14">
         <Message v-for="msg in messages" :msg="msg" />
       </div>
       <form

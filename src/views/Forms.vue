@@ -11,7 +11,7 @@ import Pagination from '@/components/Pagination.vue'
   <div>
     <div class="flex items-center justify-between mb-5">
       <router-link
-        to="company-add"
+        to="form-add"
         class="flex items-center gap-2 bg-teal-700 rounded px-5 p-2 text-white"
       >
         <i class="bx bx-plus"></i>

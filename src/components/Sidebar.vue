@@ -1,5 +1,8 @@
 <script setup>
 import { menus } from '@/constants/menu'
+import { useRoute } from 'vue-router'
+const route = useRoute()
+console.log(route.name)
 </script>
 
 <template>
@@ -9,7 +12,12 @@ import { menus } from '@/constants/menu'
     </div>
     <h4 class="lg:block hidden text-xs px-5 text-gray-500 mb-5">MENU</h4>
     <div class="mb-5">
-      <router-link v-for="menu in menus" :to="menu.path" class="relative bg-gray-500">
+      <router-link
+        v-for="menu in menus"
+        :to="menu.path"
+        class="relative bg-gray-500"
+        :class="route.name.includes(menu.name) ? 'bg-teal-600' : ''"
+      >
         <div class="absolute h-full py-2.5 hidden left">
           <div class="border-[3px] rounded-r-lg rounded-l h-full border-teal-700"></div>
         </div>

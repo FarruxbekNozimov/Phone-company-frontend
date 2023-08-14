@@ -3,7 +3,7 @@ defineProps(['msg'])
 </script>
 // 'user_photo', 'msg', 'imgs', 'mine'
 <template>
-  <div class="px-4 my-2 rounded-lg gap-3 flex justify-end">
+  <div class="w-full px-4 my-2 rounded-lg gap-3 flex justify-center">
     <img v-if="!msg.mine" class="h-10 w-10 rounded-full" :src="msg.user_photo" alt="" />
     <div v-else class="w-10"></div>
     <div class="">
