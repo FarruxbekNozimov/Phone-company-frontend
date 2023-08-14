@@ -86,15 +86,21 @@ const toggleFullScreen = () => {
           class="absolute py-2 rounded-lg top-12 duration-300 w-36 bg-white shadow-xl"
           :class="drop ? 'right-0' : '-right-56'"
         >
-          <div class="px-5 flex items-center gap-2 cursor-pointer hover:bg-gray-300/50 p-1 mb-2">
+          <router-link
+            @click="changeDrop"
+            to="/profile"
+            class="px-5 flex items-center gap-2 cursor-pointer hover:bg-gray-300/50 p-1 mb-2"
+          >
             <i class="bx bx-user text-lg"></i> Profile
-          </div>
+          </router-link>
           <hr class="bg-gray-500 w-full mb-2" />
-          <div
+          <router-link
+            @click="changeDrop"
+            to="/login"
             class="px-5 flex items-center gap-2 cursor-pointer hover:bg-gray-300/50 p-1 text-red-500"
           >
             <i class="bx bx-log-out-circle"></i> Logout
-          </div>
+          </router-link>
         </div>
       </div>
     </div>

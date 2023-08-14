@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 import { datas } from '@/constants/itemDatas'
+const alert = ref(true)
 
 const currentItem = ref(1)
 </script>
@@ -8,12 +9,14 @@ const currentItem = ref(1)
 <template>
   <div class="relative">
     <div
-      class="bg-yellow-200/20 border border-yellow-200 rounded-lg text-yellow-800/70 text-sm p-5 shadow roudned mb-5"
+      class="bg-yellow-200/20 border border-yellow-200 rounded-lg text-yellow-800/70 text-sm p-5 shadow roudned mb-5 flex items-center justify-between"
+      :class="alert ? 'block' : 'hidden'"
     >
       Alert text from administration!
+      <i class="bx bx-x text-xl cursor-pointer" @click="() => (alert = false)"></i>
     </div>
-    <div class="bg-white rounded-lg shadow p-5 mb-5">
-      <div class="border rounded-lg mb-5">
+    <div class="h-[80vh] flex bg-white rounded-lg shadow p-5 mb-5">
+      <div class="bg-black border rounded-lg mb-5">
         <a
           class="block p-4 px-5 hover:bg-gray-200 rounded-lg"
           :class="
@@ -27,7 +30,7 @@ const currentItem = ref(1)
           Item {{ el }}
         </a>
       </div>
-      <div class="h-96 text-gray-600 overflow-y-auto scroll-smooth">
+      <div class="h-full text-gray-600 overflow-y-auto scroll-smooth">
         <div v-for="(el, i) in datas" :id="`item-${i + 1}`" class="">
           <h3 class="text-2xl my-2">Item {{ i + 1 }}</h3>
           <p class="leading-6">{{ el }}</p>

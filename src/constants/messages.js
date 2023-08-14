@@ -38,5 +38,15 @@ export const messages = ref([
     user_photo: '/users/avatar-2.jpg',
     msg: 'Sit meis deleniti eu, pri vidit meliore docendi ut, an eum erat animal commodo.',
     mine: false
+  },
+  {
+    user_photo: '/users/avatar-2.jpg',
+    msg: 'Sit meis deleniti eu, pri vidit meliore docendi ut, an eum erat animal commodo.',
+    mine: false
+  },
+  {
+    user_photo: '/users/avatar-2.jpg',
+    msg: 'Sit meis deleniti eu, pri vidit meliore docendi ut, an eum erat animal commodo.',
+    mine: false
   }
 ])

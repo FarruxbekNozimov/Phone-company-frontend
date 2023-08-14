@@ -21,7 +21,7 @@ const addMessage = () => {
 </script>
 
 <template>
-  <div class="flex gap-5 h-screen">
+  <div class="flex gap-5 h-[80vh]">
     <div class="w-[25%] sticky">
       <select
         class="mb-5 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded block w-full p-2.5 outline-none"
@@ -79,8 +79,8 @@ const addMessage = () => {
         :data="chat_menus.map((i) => i.name)"
       />
     </div>
-    <div class="w-[45%] bg-white h-screen rounded-lg shadow relative">
-      <div class="h-full overflow-x-auto pb-14">
+    <div class="w-[45%] bg-white rounded-lg shadow relative">
+      <div class="h-full overflow-y-scroll pb-14">
         <Message v-for="msg in messages" :msg="msg" />
       </div>
       <form
