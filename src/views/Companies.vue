@@ -44,10 +44,12 @@ import Pagination from '@/components/Pagination.vue'
         </thead>
         <tbody>
           <tr v-for="el in 10" class="bg-white font-medium text-gray-900 border-b hover:bg-gray-50">
-            <td class="px-10 py-4 whitespace-nowrap flex items-center justify-center gap-2">
-              <img v-if="el % 2" src="/logo.svg" class="h-9 w-9 rounded-full" alt="" />
-              <img v-else src="/users/avatar-2.jpg" class="h-9 w-9 rounded-full" alt="" />
-              Company name
+            <td class="py-4 whitespace-nowrap flex items-center justify-center gap-2">
+              <router-link to="/company" class="flex items-center gap-2">
+                <img v-if="el % 2" src="/logo.svg" class="h-9 w-9 rounded-full" alt="" />
+                <img v-else src="/users/avatar-2.jpg" class="h-9 w-9 rounded-full" alt="" />
+                Company name
+              </router-link>
             </td>
             <td class="px-5 py-4 whitespace-nowrap">
               <div class="flex items-center gap-2">
@@ -105,8 +107,12 @@ import Pagination from '@/components/Pagination.vue'
             </td>
             <td class="px-5 py-4 whitespace-nowrap">
               <div class="flex gap-2">
-                <ViewButton />
-                <EditButton />
+                <router-link to="/company">
+                  <ViewButton />
+                </router-link>
+                <router-link to="/company-add">
+                  <EditButton />
+                </router-link>
                 <ToggleButton />
                 <DeleteButton />
               </div>

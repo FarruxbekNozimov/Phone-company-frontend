@@ -83,6 +83,7 @@ const addMessage = () => {
       <div class="h-full overflow-y-scroll pb-14">
         <Message v-for="msg in messages" :msg="msg" />
       </div>
+
       <form
         @submit.prevent="addMessage"
         class="bg-white absolute bottom-0 w-full p-1 flex items-center"

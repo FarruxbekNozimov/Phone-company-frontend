@@ -24,11 +24,6 @@ const toggleFullScreen = () => {
     class="fixed z-50 h-[70px] lg:w-[calc(100%-260px)] w-[calc(100%-80px)] bg-white shadow flex items-center justify-between px-5"
   >
     <div class="flex items-center gap-5">
-      <!-- <i
-        @click="toggleShort"
-        class="text-gray-500 duration-300 cursor-pointer hover:scale-105 text-3xl"
-        :class="isShort ? 'bx bx-right-arrow-alt ' : 'rotate-180 bx bx-menu-alt-right'"
-      ></i> -->
       <div class="relative">
         <div class="absolute inset-y-0 left-0 flex items-center pl-3">
           <i class="bx bx-search text-gray-500 text-xl"></i>
@@ -82,6 +77,7 @@ const toggleFullScreen = () => {
         <div @click="changeDrop" class="cursor-pointer">
           John Doe <i class="bx bxs-chevron-down"></i>
         </div>
+          <div class="absolute bg-black w-full h-sreen">asd</div>
         <div
           class="absolute py-2 rounded-lg top-12 duration-300 w-36 bg-white shadow-xl"
           :class="drop ? 'right-0' : '-right-56'"

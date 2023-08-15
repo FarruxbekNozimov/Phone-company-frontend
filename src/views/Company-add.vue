@@ -9,6 +9,7 @@ const tariff = {
 
 <template>
   <div class="p-5 rounded bg-white shadow">
+    <h3 class="text-2xl mb-3 text-gray-800">Add company</h3>
     <h3 class="text-md mb-2 text-gray-700">Company Name</h3>
     <input
       type="text"
@@ -17,14 +18,14 @@ const tariff = {
     />
     <label
       for="upload"
-      class="text-gray-600 h-64 border border-teal-600 rounded block text-center py-14 mb-3"
+      class="text-gray-600 h-64 border border-teal-600 rounded block text-center py-14 mb-3 cursor-pointer"
     >
       <i class="bx bx-cloud-upload text-7xl"></i>
       <h3 class="text-2xl">Add company logo</h3>
     </label>
     <input type="file" id="upload" class="hidden" />
     <p class="mb-3 text-gray-800">Leave image field blanc to get random pictures</p>
-    <h3 class="text-md mb-2 text-gray-700">Company Name</h3>
+    <h3 class="text-md mb-2 text-gray-700">Company Comment</h3>
     <textarea
       class="h-28 w-full border p-3 outline-none focus:border-teal-600 duration-300 rounded mb-4 border-gray-400"
       placeholder="Enter company comment"

@@ -8,6 +8,7 @@ const pushData = () => data.value.push({})
 <template>
   <div class="flex gap-5">
     <div class="h-[80vh] w-[75%] bg-white p-5">
+    <h3 class="text-2xl mb-3 text-gray-800">Add company</h3>
       <h3 class="text-md mb-2 text-gray-700">Company Name</h3>
       <select
         class="outline-none bg-white border border-gray-300 text-gray-900 rounded focus:ring-teal-500 focus:border-teal-500 block w-full p-3 mb-5"

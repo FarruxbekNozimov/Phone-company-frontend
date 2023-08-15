@@ -10,7 +10,9 @@ import EditButton from '@/components/Buttons/EditButton.vue'
       <img src="/users/avatar-2.jpg" class="h-8 w-8 object-cover rounded-full" alt="" />
       <h3 class="text-4xl text-gray-700">Form name</h3>
       <div class="flex items-center gap-3">
-        <EditButton />
+        <router-link to="/form-add">
+          <EditButton />
+        </router-link>
         <ToggleButton />
         <DeleteButton />
       </div>
