@@ -96,7 +96,7 @@ const checkAll = (check) => {
           </tr>
         </thead>
         <tbody>
-          <tr v-for="el in 10" class="bg-white font-medium text-gray-900 border-b hover:bg-gray-50">
+          <tr v-for="el in 6" class="bg-white font-medium text-gray-900 border-b hover:bg-gray-50">
             <td class="w-4 p-4">
               <input
                 type="checkbox"
@@ -104,29 +104,57 @@ const checkAll = (check) => {
               />
             </td>
             <td class="px-5 py-4 whitespace-nowrap gap-2">
-              <span class="text-teal-600">#001235</span>
+              <router-link to="/request" class="text-teal-600">#001235</router-link>
             </td>
             <td class="px-5 py-4 whitespace-nowrap">
-              <router-link to="form" class="block text-md">User name</router-link>
+              <router-link to="/user" class="block text-md">User name</router-link>
             </td>
             <td class="px-5 py-4 whitespace-nowrap">12.07.24</td>
             <td class="px-5 py-4 whitespace-nowrap gap-2">
               <router-link to="form" class="block text-md">Form name</router-link>
             </td>
             <td class="px-5 py-4 whitespace-nowrap gap-2">
-              <StatusButton text="Listed" bg="bg-blue-500/20" color="text-blue-500" />
+              <StatusButton
+                v-if="el == 1"
+                text="Listed"
+                bg="bg-blue-500/20"
+                color="text-blue-500"
+              />
+              <StatusButton
+                v-else-if="el == 2"
+                text="Active"
+                bg="bg-green-500/20"
+                color="text-green-500"
+              />
+              <StatusButton v-else-if="el == 3" text="Issue" bg="bg-red-500" color="text-white" />
+              <StatusButton
+                v-else-if="el == 4"
+                text="Deleted"
+                bg="bg-red-500/20"
+                color="text-red-500"
+              />
+              <StatusButton
+                v-else-if="el == 5"
+                text="Active"
+                bg="bg-green-500/20"
+                color="text-green-500"
+              />
+              <StatusButton
+                v-else-if="el == 6"
+                text="Closed"
+                bg="bg-purple-500/20"
+                color="text-purple-500"
+              />
             </td>
 
-            <td class="flex gap-2 px-5 py-4 w-full whitespace-nowrap">
+            <td class="flex gap-2 px-5 py-4 w-full  items-centewhitespace-nowrap">
               <router-link to="/request">
                 <ViewButton />
               </router-link>
-              <router-link to="/request">
+              <router-link to="/chats">
                 <ChatButton />
               </router-link>
-              <router-link to="/request-add">
-                <ToggleButton />
-              </router-link>
+              <ToggleButton />
               <DeleteButton />
             </td>
           </tr>

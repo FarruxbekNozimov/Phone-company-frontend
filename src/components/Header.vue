@@ -77,7 +77,6 @@ const toggleFullScreen = () => {
         <div @click="changeDrop" class="cursor-pointer">
           John Doe <i class="bx bxs-chevron-down"></i>
         </div>
-          <div class="absolute bg-black w-full h-sreen">asd</div>
         <div
           class="absolute py-2 rounded-lg top-12 duration-300 w-36 bg-white shadow-xl"
           :class="drop ? 'right-0' : '-right-56'"

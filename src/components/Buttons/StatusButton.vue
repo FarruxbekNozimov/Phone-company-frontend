@@ -3,11 +3,11 @@ defineProps(['text', 'bg', 'color', 'pad'])
 </script>
 
 <template>
-  <button
+  <span
     class="rounded"
     :class="`${bg} ${color} ${pad ? pad : 'text-xs p-1 px-2'}`"
     v-html="text"
-  ></button>
+  ></span>
 </template>
 
 <style scoped></style>
