@@ -1,5 +1,5 @@
 <script setup>
-defineProps(['img', 'title', 'text', 'isactive', 'isChat'])
+defineProps(['img', 'title', 'text', 'isactive', 'isChat', 'selected'])
 </script>
 
 <template>
@@ -13,6 +13,7 @@ defineProps(['img', 'title', 'text', 'isactive', 'isChat'])
         id="checkbox"
         type="checkbox"
         class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded"
+        :checked="selected"
       />
       <label for="checkbox" class="ml-2 text-sm font-medium text-gray-900 flex items-center gap-4">
         <img :src="img" class="h-9 w-9 rounded-full" alt="" />

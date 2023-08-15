@@ -2,6 +2,9 @@
 import ChatOne from '../components/ChatOne.vue'
 import DeleteButton from '../components/Buttons/DeleteButton.vue'
 import Clear from '../components/Clear.vue'
+import { ref } from 'vue'
+const checkAll = ref(false)
+const changeCheck = () => (checkAll.value = !checkAll.value)
 </script>
 
 <template>
@@ -54,6 +57,7 @@ import Clear from '../components/Clear.vue'
             id="checkbox"
             type="checkbox"
             class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded"
+            @change="changeCheck"
           />
           <label for="checkbox" class="ml-2 text-sm font-medium text-gray-900">Check all</label>
         </div>
@@ -63,9 +67,22 @@ import Clear from '../components/Clear.vue'
           title="John Doe"
           text="company name"
           isactive="1"
+          :selected="checkAll"
         />
-        <ChatOne isChat="1" img="/users/avatar-2.jpg" title="John Doe" text="company name" />
-        <ChatOne isChat="1" img="/logo.svg" title="John Doe" text="company name" />
+        <ChatOne
+          isChat="1"
+          img="/users/avatar-2.jpg"
+          title="John Doe"
+          text="company name"
+          :selected="checkAll"
+        />
+        <ChatOne
+          isChat="1"
+          img="/logo.svg"
+          title="John Doe"
+          text="company name"
+          :selected="checkAll"
+        />
       </div>
     </div>
     <div class="w-[58%]">
