@@ -8,7 +8,7 @@ export const chat_menus = ref([
     this: 1,
     fields: [
       { icon: 'bx bx-coffee' },
-      { icon: 'bx bxs-castle' },
+      { icon: 'bx bx-knife' },
       { icon: 'bx bx-info-circle' },
       { icon: '' },
       { icon: '' },
@@ -24,7 +24,7 @@ export const chat_menus = ref([
     this: 0,
     fields: [
       { icon: 'bx bx-coffee' },
-      { icon: 'bx bxs-castle' },
+      { icon: 'bx bx-knife' },
       { icon: 'bx bx-info-circle' },
       { icon: 'bx bx-task' }
     ]
@@ -45,7 +45,7 @@ export const chat_menus = ref([
     this: 0,
     fields: [
       { icon: 'bx bx-coffee' },
-      { icon: 'bx bxs-castle' },
+      { icon: 'bx bx-knife' },
       { icon: 'bx bx-info-circle' },
       { icon: '' },
       { icon: '' },

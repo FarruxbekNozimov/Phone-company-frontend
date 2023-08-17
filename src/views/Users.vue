@@ -48,7 +48,7 @@ import StatusButton from '@/components/Buttons/StatusButton.vue'
             <td class="py-4 whitespace-nowrap flex items-center justify-center gap-2">
               <img v-if="el % 2" src="/logo.svg" class="h-9 w-9 rounded-full" alt="" />
               <img v-else src="/users/avatar-2.jpg" class="h-9 w-9 rounded-full" alt="" />
-              Company name
+              <router-link to="/company"> Company name </router-link>
             </td>
             <td class="px-5 py-4 whitespace-nowrap">
               <router-link to="/company"> company name </router-link>
@@ -104,12 +104,12 @@ import StatusButton from '@/components/Buttons/StatusButton.vue'
             </td>
             <td class="px-5 py-4 whitespace-nowrap">
               <div class="flex gap-2">
-                <rotuer-link to="/user">
+                <router-link to="/user">
                   <ViewButton />
-                </rotuer-link>
-                <rotuer-link to="/user-add">
+                </router-link>
+                <router-link to="/user-add">
                   <EditButton />
-                </rotuer-link>
+                </router-link>
                 <ToggleButton />
                 <DeleteButton />
               </div>

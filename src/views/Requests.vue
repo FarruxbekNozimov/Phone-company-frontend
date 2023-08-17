@@ -49,8 +49,10 @@ const checkAll = (check) => {
           />
         </div>
         <div class="flex items-center gap-5">
-          <Dropdown icon="bx bx-user-circle" text="Filter by user" :data="fitler"> </Dropdown>
-          <Dropdown icon="bx bx-check-circle" text="Filter by status" :data="status"> </Dropdown>
+          <Dropdown icon="bx bx-user-circle" text="Filter by user" :data="fitler" search="1">
+          </Dropdown>
+          <Dropdown icon="bx bx-check-circle" text="Filter by status" :data="status" search="1">
+          </Dropdown>
         </div>
       </div>
     </div>
@@ -147,7 +149,7 @@ const checkAll = (check) => {
               />
             </td>
 
-            <td class="flex gap-2 px-5 py-4 w-full  items-centewhitespace-nowrap">
+            <td class="flex gap-2 px-5 py-4 w-full items-centewhitespace-nowrap">
               <router-link to="/request">
                 <ViewButton />
               </router-link>
