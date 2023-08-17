@@ -25,8 +25,12 @@ const toggleField = () => (field.value = !field.value)
         <span class="text-lg ml-3">$125</span>
       </div>
       <div @click="toggleField" class="ml-8 pr-2 relative flex items-center gap-2 cursor-pointer">
-        <span class="absolute -left-7 duration-300">➖</span>
-        <span class="absolute -left-7 duration-300" :class="field ? 'rotate-90' : ''">➖</span>
+        <span
+          class="text-xl text-gray-800 absolute -left-7 duration-300"
+          :class="field ? 'rotate-180' : ''"
+        >
+          <i class="bx bx-chevron-down"></i>
+        </span>
         <span class="text-sm">Fields: {{ fields?.length || 0 }}</span>
       </div>
     </div>

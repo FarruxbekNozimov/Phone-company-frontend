@@ -1,6 +1,9 @@
 <script setup>
 import Loading from '@/components/Loading.vue'
 import { chat_menus } from '../constants/chat_menus'
+import { ref } from 'vue'
+
+const activeBtn = ref(0)
 </script>
 
 <template>
@@ -112,13 +115,12 @@ import { chat_menus } from '../constants/chat_menus'
     </div>
     <div class="flex items-center mb-5">
       <div
-        v-for="el in chat_menus"
+        v-for="(el, i) in chat_menus"
         class="p-2 px-4 rounded cursor-pointer"
-        :class="`${el.bg} ${el.color}`"
+        :class="activeBtn == i ? `${el.active} text-white` : `${el.bg} ${el.color}`"
         @click="
           () => {
-            chat_menus.map((el) => (el.this = 0))
-            el.this = 1
+            activeBtn = i
           }
         "
       >

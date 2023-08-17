@@ -4,7 +4,7 @@ defineProps(['text', 'bg', 'color', 'pad'])
 
 <template>
   <span
-    class="rounded"
+    class="text-center rounded"
     :class="`${bg} ${color} ${pad ? pad : 'text-xs p-1 px-2'}`"
     v-html="text"
   ></span>

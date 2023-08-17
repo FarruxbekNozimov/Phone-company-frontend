@@ -105,7 +105,7 @@ const changeCheck = () => (checkAll.value = !checkAll.value)
         </div>
         <div class="mb-2">
           <span class="">Company name:</span>
-          <router-link v-for="el in 5" to="" class="text-teal-700">
+          <router-link v-for="el in 5" to="/user" class="text-teal-700">
             Username <span v-if="el != 5" class="text-gray-700">,</span>
           </router-link>
         </div>
